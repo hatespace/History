@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="539dp"
+
+        android:ems="10"
+        android:hint="请输入要查找的人物"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/next_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/p1"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="29dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/p2"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="28dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p3"
+        app:layout_constraintStart_toEndOf="@+id/p1"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/p3"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginEnd="9dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p2"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/p4"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p1" />
+
+    <Button
+        android:id="@+id/p5"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p6"
+        app:layout_constraintStart_toEndOf="@+id/p4"
+        app:layout_constraintTop_toBottomOf="@+id/p2" />
+
+    <Button
+        android:id="@+id/p6"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p5"
+        app:layout_constraintTop_toBottomOf="@+id/p3" />
+
+    <Button
+        android:id="@+id/p7"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="33dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/p4" />
+
+    <Button
+        android:id="@+id/p8"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="33dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/p9"
+        app:layout_constraintStart_toEndOf="@+id/p7"
+        app:layout_constraintTop_toBottomOf="@+id/p5" />
+
+    <Button
+        android:id="@+id/p9"
+        android:layout_width="0dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginRight="9dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/p8"
+        app:layout_constraintTop_toBottomOf="@+id/p6" />
+
+    <Button
+        android:id="@+id/next_page"
+        android:layout_width="85dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="16dp"
+        android:text="下一页"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
