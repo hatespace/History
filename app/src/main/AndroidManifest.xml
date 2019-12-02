@@ -9,12 +9,13 @@
         android:label="历史天天看"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".Story_pageActivity"></activity>
         <activity android:name=".Idiom_pageActivity"></activity>
         <activity android:name=".Philosophy_pageActivity"></activity>
         <activity android:name=".People_pageActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"></activity>>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

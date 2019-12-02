@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.his_idiom).setOnClickListener(this);
         findViewById(R.id.his_people).setOnClickListener(this);
         findViewById(R.id.his_phi).setOnClickListener(this);
-
     }
     public void onClick(View view) {
         switch (view.getId()) {
