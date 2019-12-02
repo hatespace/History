@@ -16,7 +16,6 @@
         android:ems="10"
         android:hint="请输入要查找的人物"
         android:inputType="textPersonName"
-        android:textColorHint="#F16B02"
         app:layout_constraintBottom_toTopOf="@+id/next_page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
