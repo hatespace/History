@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(this, Story_pageActivity.class);
 //                this.onPause();
                 startActivity(intent);
-                break;
+                break;//随便搞一个注释
             }
             case R.id.his_people : {
                 Intent intent = new Intent(this, People_pageActivity.class);
