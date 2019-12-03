@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 /**
  *  四个板块,有四个页面的java类文件,四个对应的xml文件,这四个xml文件是一样的,里面的控件id也是一样的
@@ -18,12 +20,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.his_story).setOnClickListener(this);
         findViewById(R.id.his_idiom).setOnClickListener(this);
         findViewById(R.id.his_people).setOnClickListener(this);
-        findViewById(R.id.his_phi).setOnClickListener(this);
+        findViewById(R.id.his_phi).setOnClickListener(this);;
+
+
     }
     public void onClick(View view) {
         switch (view.getId()) {
+            //history按钮暂时改成测试listview的
             case R.id.his_story : {
-                Intent intent = new Intent(this, Story_pageActivity.class);
+                Intent intent = new Intent(this, ListviewActivity.class);
 //                this.onPause();
                 startActivity(intent);
                 break;//随便搞一个注释

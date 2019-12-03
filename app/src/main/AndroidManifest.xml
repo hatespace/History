@@ -14,6 +14,7 @@
         <activity android:name=".Idiom_pageActivity"></activity>
         <activity android:name=".Philosophy_pageActivity"></activity>
         <activity android:name=".People_pageActivity"></activity>
+        <activity android:name=".ListviewActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
