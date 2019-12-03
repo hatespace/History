@@ -1,142 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg7"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/MainHeadline"
-        android:layout_width="212dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="438dp"
-        android:height="100dp"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="历史天天看"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHint="@android:color/background_dark"
-        android:textSize="40sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/viewMore"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/top"/>
 
-    <Button
-        android:id="@+id/his_people"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="历史人物"
-        android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/his_story"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="历史小故事"
-        android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/his_people"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/his_people" />
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/his_phi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="535dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="百家哲学"
-        android:textSize="20dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/his_people"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/his_idiom"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeadline" />
+    <include layout="@layout/bottom"/>
 
-    <Button
-        android:id="@+id/his_idiom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="428dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="成语典故"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/viewMore"
-        android:layout_width="347dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="127dp"
-        android:fontFamily="@font/fangzhenggudi"
-        android:text="更多信息请访问："
-        android:textAlignment="center"
-        android:textColor="#FFFDE7"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeadline" />
 
-    <TextView
-        android:id="@+id/web1"
-        android:layout_width="347dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="35dp"
-        android:text="https://www.y5000.com"
-        android:textAlignment="center"
-        android:textColor="#FFFDE7"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewMore"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/web2"
-        android:layout_width="347dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="528dp"
-        android:layout_marginEnd="30dp"
-        android:text="http://www.zgls5000.net"
-        android:textAlignment="center"
-        android:textColor="#FFFDE7"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@id/web1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MainHeadline"
-        tools:textColor="#FFFDE7" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
