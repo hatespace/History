@@ -1,8 +1,8 @@
 package com.example.history;
 
-public class Player {
+public class ListItem {
     String name;
-    public Player(String name){
+    public ListItem(String name){
         this.name = name;
     }
     public String getName(){

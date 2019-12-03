@@ -1,108 +1,98 @@
 package com.example.history;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.ImageButton;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 public class People_pageActivity extends AppCompatActivity implements View.OnClickListener {
+    ArrayList<ListItem> listItems = new ArrayList<ListItem>();
     AssetManager assetManager = null;
     private final String relePath = "../../assets/stories";
     File myFile = null;
     //strFileName存放stories文件下的所有故事的文件名称
     String[] strFileName = null;
-    //txvButton存放对p1到p9的文本显示引用，便于在按了下一页按钮之后，显示的人物名字随之改变
-    TextView[] txvButton = new TextView[9];
-    //currentCount是计算当前到第几页，一页显示9个人物，翻页的时候，currentCount就要加9，作为下标，在fileName中获取名字
-    int intCurrentCount = 0;
-    //loadPage函数用于对一些动态的UI进行修改
-    public void loadPage(){
-        for (TextView v:txvButton) {
-            v.setText(strFileName[intCurrentCount]);
-            intCurrentCount++;
-        }
+    private ImageButton people;
+    private ImageButton story;
+    private ImageButton phi;
+    private ImageButton ido;;
+
+    private void resetImg(){
+        people.setImageResource(R.drawable.renwu_pressed);
+        story.setImageResource(R.drawable.gushi_pressed);
+        phi.setImageResource(R.drawable.zhexue_pressed);
+        ido.setImageResource(R.drawable.chengyu_pressed);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_people_page);
-       try {
-           assetManager = getAssets();
-           strFileName = assetManager.list("stories");
-       }catch (NullPointerException e){
-           e.printStackTrace();
-       }
-       catch (IOException e){
-           e.printStackTrace();
-       }
-        txvButton[0] = findViewById(R.id.p1);
-        txvButton[1] = findViewById(R.id.p2);
-        txvButton[2] = findViewById(R.id.p3);
-        txvButton[3] = findViewById(R.id.p4);
-        txvButton[4] = findViewById(R.id.p5);
-        txvButton[5] = findViewById(R.id.p6);
-        txvButton[6] = findViewById(R.id.p7);
-        txvButton[7] = findViewById(R.id.p8);
-        txvButton[8] = findViewById(R.id.p9);
-        for (String strName : strFileName){
-            strName.replace("txt"," ");
+        people=(ImageButton) findViewById(R.id.his_people);
+        story=(ImageButton) findViewById(R.id.his_story);
+        phi=(ImageButton) findViewById(R.id.his_phi);
+        ido=(ImageButton) findViewById(R.id.his_idiom);
+        resetImg();
+        people.setImageResource(R.drawable.renwu);
+        story.setOnClickListener(this);
+        ido.setOnClickListener(this);
+        people.setOnClickListener(this);
+        phi.setOnClickListener(this);
+        findViewById(R.id.top).setOnClickListener(this);
+        try {
+            assetManager = getAssets();
+            strFileName = assetManager.list("stories");
+            System.out.println(strFileName.length);
+        }catch (IOException e){
+            e.printStackTrace();
         }
-        for (TextView v:txvButton) {
-            v.setText(strFileName[intCurrentCount]);
-            intCurrentCount++;
+        for (String str: strFileName) {
+            listItems.add(new ListItem("test"));
         }
-
-    }
-    @Override
-    public boolean onKeyDown(int code, KeyEvent keyEvent){
-        if (code == keyEvent.KEYCODE_BACK){
-            this.finish();
-        }
-        return true;
+        ListItemAdapter listItemAdapter = new ListItemAdapter(People_pageActivity.this,
+                R.layout.item, listItems);
+        ListView listView = (ListView) findViewById(R.id.listview);
+        listView.setAdapter(listItemAdapter);
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.p1:{
-
-            }
-            case R.id.p2:{
-
-            }
-            case R.id.p3:{
-
-            }
-            case R.id.p4:{
-
-            }
-            case R.id.p5:{
-
-            }
-            case R.id.p6:{
-
-            }
-            case R.id.p7:{
-
-            }
-            case R.id.p8:{
-
-            }
-            case R.id.p9:{
-
-            }
-            case R.id.next_page:{
-                loadPage();
+            case R.id.top:{
+                Intent intent = new Intent(this, MainActivity .class);
+//                this.onPause();
+                startActivity(intent);
                 break;
             }
+            case R.id.his_story : {
+                Intent intent = new Intent(this, Story_pageActivity.class);
+//                this.onPause();
+                startActivity(intent);
+                break;//随便搞一个注释
+            }//随便在搞一个
+            case R.id.his_people : {
+                break;
+            }
+            case R.id.his_phi : {
+                Intent intent = new Intent(this, Philosophy_pageActivity.class);
+//                this.onPause();
+                startActivity(intent);
+                break;
+            }
+            case R.id.his_idiom : {
+                Intent intent = new Intent(this, Idiom_pageActivity.class);
+//                this.onPause();
+                startActivity(intent);
+                break;
+            }
+
         }
     }
 }

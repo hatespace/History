@@ -4,20 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
-    <include layout="@layout/top"/>
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="616dp"-->
+<!--        tools:srcCompat="@tools:sample/avatars" />-->
+    <include layout="@layout/top" />
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_main0">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:fontFamily="@font/shoujinti"
+            android:text="学历史，知兴替，明得失，正衣冠！不忘初心，牢记使命，为实现中国梦而奋斗！"
+            android:textAlignment="center"
+            android:textColor="#ff0000"
+            android:textFontWeight="1"
+            android:textSize="50dp" />
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+    </RelativeLayout>
 
-    <include layout="@layout/bottom"/>
 
+    <include
+        layout="@layout/bottom"
+         />
 
 
 </LinearLayout>

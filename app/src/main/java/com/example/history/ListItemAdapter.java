@@ -5,17 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class PlayerAdapter extends ArrayAdapter<Player> {
+public class ListItemAdapter extends ArrayAdapter<ListItem> {
     private int resourceId;
     // 构造函数
-    public PlayerAdapter(Context context,         // context上下文
-                         int textViewResourceId,  // 子项布局的id
-                         List<Player> objects){    // 数据链表
+    public ListItemAdapter(Context context,         // context上下文
+                           int textViewResourceId,  // 子项布局的id
+                           List<ListItem> objects){    // 数据链表
         super(context, textViewResourceId, objects);
         resourceId = textViewResourceId;
     }
@@ -24,7 +23,7 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // 获取当前项的Fruit实例
-        Player player = getItem(position);
+        ListItem listItem = getItem(position);
         View view;
         ViewHolder viewHolder;
 
@@ -45,7 +44,7 @@ public class PlayerAdapter extends ArrayAdapter<Player> {
 
         // 直接使用缓存中的图片控件和文本控件的实例
         // 文本控件设置文本内容
-        viewHolder.playerName.setText(player.getName());
+        viewHolder.playerName.setText(listItem.getName());
 
         return view;
     }

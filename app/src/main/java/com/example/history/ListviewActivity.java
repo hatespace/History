@@ -1,25 +1,19 @@
 package com.example.history;
 
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SearchView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class ListviewActivity extends AppCompatActivity {
     //下面是测试数据
     private static String [] item ={"阿布都","易建联","姚明","鸡蛋灌饼"};
-    ArrayList<Player> players = new ArrayList<Player>();
+    ArrayList<ListItem> listItems = new ArrayList<ListItem>();
     AssetManager assetManager = null;
     private final String relePath = "../../assets/stories";
     File myFile = null;
@@ -28,27 +22,36 @@ public class ListviewActivity extends AppCompatActivity {
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test);
+        setContentView(R.layout.mainshow);
         int i = 0;
         //初始化playerlist
         try {
             assetManager = getAssets();
             strFileName = assetManager.list("stories");
+            System.out.println(strFileName.length);
         }catch (IOException e){
             e.printStackTrace();
         }
         for (String str: strFileName) {
-            players.add(new Player(str));
+            listItems.add(new ListItem("test"));
         }
+//        int count = 0;
+//        while (!listItems.isEmpty()){
+//           try {
+//               System.out.println(listItems.get(count));
+//               count++;
+//           }catch (Exception e){
+//               e.printStackTrace();
+//           }
+//        }
 
 //            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.test, item);
 //            ListView listView = (ListView) findViewById(R.id.ListviewTest);
 //            listView.setAdapter(adapter);
 
-        PlayerAdapter playerAdapter = new PlayerAdapter(ListviewActivity.this,
-                R.layout.item,players );
-        SearchView searchView = (SearchView) findViewById(R.id.searchview);
-        ListView listView = (ListView) findViewById(R.id.ListviewTest);
-        listView.setAdapter(playerAdapter);
+        ListItemAdapter listItemAdapter = new ListItemAdapter(ListviewActivity.this,
+                R.layout.item, listItems);
+        ListView listView = (ListView) findViewById(R.id.listview);
+        listView.setAdapter(listItemAdapter);
     }
 }

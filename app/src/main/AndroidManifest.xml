@@ -10,12 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Story_pageActivity"></activity>
-        <activity android:name=".Idiom_pageActivity"></activity>
-        <activity android:name=".Philosophy_pageActivity"></activity>
-        <activity android:name=".People_pageActivity"></activity>
+        <activity android:name=".Story_pageActivity" android:launchMode="singleTask"    ></activity>
+        <activity android:name=".Idiom_pageActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".Philosophy_pageActivity" android:launchMode="singleTask"></activity>
+        <activity android:name=".People_pageActivity" android:launchMode="singleTask"></activity>
         <activity android:name=".ListviewActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

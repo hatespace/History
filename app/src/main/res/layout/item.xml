@@ -9,7 +9,9 @@
         android:layout_height="48dp"
         android:layout_gravity="center"
         android:fontFamily="@font/fangzhenggudi"
-        android:textSize="40dp"
-        android:textAlignment="center"/>
+        android:text="test"
+        android:textAlignment="center"
+        android:textColor="#B8A2A2"
+        android:textSize="40dp" />
 
 </LinearLayout>
