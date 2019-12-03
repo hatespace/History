@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/bg7"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:id="@+id/id_tab_1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/his_people"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:clickable="false"
+            android:src="@drawable/renwu_pressed"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="历史人物"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_tab_2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/his_story"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/gushi_pressed"
+            android:scaleType="centerInside"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="历史小故事"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_tab_3"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/his_phi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/zhexue_pressed"
+            android:scaleType="centerInside"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="百家哲学"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/id_tab_4"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/his_idiom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#00000000"
+            android:clickable="false"
+            android:src="@drawable/chengyu_pressed"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="成语典故"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
